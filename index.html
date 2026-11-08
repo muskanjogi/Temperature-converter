@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Temperature Converter</title>
+<style>
+body{font-family:Arial;text-align:center;background:#ffeef5;padding:50px}
+.box{background:white;padding:30px;border-radius:15px;display:inline-block}
+input{padding:10px;font-size:18px}
+button{padding:10px 20px;background:#ff4d6d;color:white;border:none;border-radius:10px;font-size:18px}
+</style>
+</head>
+<body>
+<div class="box">
+<h2>🌡️ Temperature Converter</h2>
+<input type="number" id="temp" placeholder="Enter Celsius">
+<br><br>
+<button onclick="convert()">Convert</button>
+<h3 id="result"></h3>
+</div>
+<script>
+function convert(){
+let c=document.getElementById("temp").value;
+let f=(c*9/5)+32;
+document.getElementById("result").innerText=c+"°C = "+f+"°F";
+}
+</script>
+</body>
+</html>
